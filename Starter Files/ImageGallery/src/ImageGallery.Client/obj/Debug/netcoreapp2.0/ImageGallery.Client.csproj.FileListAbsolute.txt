@@ -1,0 +1,14 @@
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\bin\Debug\netcoreapp2.0\ImageGallery.Client.deps.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\bin\Debug\netcoreapp2.0\ImageGallery.Client.runtimeconfig.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\bin\Debug\netcoreapp2.0\ImageGallery.Client.runtimeconfig.dev.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\bin\Debug\netcoreapp2.0\ImageGallery.Client.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\bin\Debug\netcoreapp2.0\ImageGallery.Client.pdb
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\bin\Debug\netcoreapp2.0\ImageGallery.Model.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\bin\Debug\netcoreapp2.0\ImageGallery.Model.pdb
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\obj\Debug\netcoreapp2.0\ImageGallery.Client.csprojAssemblyReference.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\obj\Debug\netcoreapp2.0\ImageGallery.Client.csproj.CoreCompileInputs.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\obj\Debug\netcoreapp2.0\ImageGallery.Client.AssemblyInfoInputs.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\obj\Debug\netcoreapp2.0\ImageGallery.Client.AssemblyInfo.cs
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\obj\Debug\netcoreapp2.0\ImageGallery.Client.csproj.CopyComplete
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\obj\Debug\netcoreapp2.0\ImageGallery.Client.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\obj\Debug\netcoreapp2.0\ImageGallery.Client.pdb

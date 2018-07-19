@@ -1,0 +1,14 @@
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.API.deps.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.API.runtimeconfig.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.API.runtimeconfig.dev.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.API.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.API.pdb
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.Model.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.Model.pdb
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.csprojAssemblyReference.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.csproj.CoreCompileInputs.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.AssemblyInfoInputs.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.AssemblyInfo.cs
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.csproj.CopyComplete
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.pdb
