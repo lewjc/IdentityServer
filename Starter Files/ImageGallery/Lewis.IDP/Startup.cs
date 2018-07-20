@@ -34,10 +34,10 @@ namespace Lewis.IDP
             {
                 app.UseDeveloperExceptionPage();
             }
-            
+
+            app.UseIdentityServer();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
-            app.UseIdentityServer();
             
         }
     }

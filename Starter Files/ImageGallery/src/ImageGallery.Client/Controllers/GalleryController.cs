@@ -1,10 +1,15 @@
-﻿using ImageGallery.Client.Services;
+﻿using IdentityModel.Client;
+using ImageGallery.Client.Services;
 using ImageGallery.Client.ViewModels;
 using ImageGallery.Model;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -12,6 +17,7 @@ using System.Threading.Tasks;
 
 namespace ImageGallery.Client.Controllers
 {
+    [Authorize]
     public class GalleryController : Controller
     {
         private readonly IImageGalleryHttpClient _imageGalleryHttpClient;
@@ -23,6 +29,8 @@ namespace ImageGallery.Client.Controllers
 
         public async Task<IActionResult> Index()
         {
+
+            WriteOutIdentityInformation();
             // call the API
             var httpClient = await _imageGalleryHttpClient.GetClient(); 
 
@@ -118,6 +126,7 @@ namespace ImageGallery.Client.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddImage(AddImageViewModel addImageViewModel)
         {   
@@ -160,6 +169,60 @@ namespace ImageGallery.Client.Controllers
             }
 
             throw new Exception($"A problem happened while calling the API: {response.ReasonPhrase}");
-        }               
+        }  
+        
+
+        public async Task WriteOutIdentityInformation()
+        {
+            
+            var identityToekn = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.IdToken);
+
+            Debug.WriteLine($"Identity Token: {identityToekn}");
+
+            foreach (var claim in User.Claims)
+            {
+                Debug.WriteLine($"Claim Type: {claim.Type} - Claim Value: {claim.Value}");
+            }
+
+        }
+
+        public async Task Logout()
+        {
+            // Signs us out from the site and the identity server.
+            await HttpContext.SignOutAsync("Cookies");
+            await HttpContext.SignOutAsync("oidc");
+
+            
+        }
+
+        public async Task<IActionResult> OrderFrame()
+        {
+            // Gets the meta data document from the idp endpoint
+            var discoveryClient = new DiscoveryClient("https://localhost:44356");
+
+            // get meta data from idp
+            var metaDataResponse = await discoveryClient.GetAsync();
+
+            // pass the endpoint to the user info client
+            var userInfoClient = new UserInfoClient(metaDataResponse.UserInfoEndpoint);
+
+            // get an access token
+            var accessToken = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.AccessToken);
+
+            // pass that access token to the endpoint and get info from the user info endpoint.
+            var response = await userInfoClient.GetAsync(accessToken);
+
+            if (response.IsError)
+            {
+                throw new Exception("Error accessing user info endpoint for IDP", response.Exception);
+            }
+
+            // Here we search through all of the claims and grab the first claim that is an address, if it is not null we grab its value.
+            var address = response.Claims.FirstOrDefault(c => c.Type == "address")?.Value;
+
+            return View(new OrderFrameViewModel(address));
+
+        }
+
     }
 }
