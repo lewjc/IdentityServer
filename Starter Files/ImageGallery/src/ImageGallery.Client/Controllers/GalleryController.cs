@@ -200,7 +200,7 @@ namespace ImageGallery.Client.Controllers
             
         }
 
-        [Authorize(Roles = "PayingUser")]
+        [Authorize(Policy = "CanOrderFrame")]
         public async Task<IActionResult> OrderFrame()
         {
             // Gets the meta data document from the idp endpoint

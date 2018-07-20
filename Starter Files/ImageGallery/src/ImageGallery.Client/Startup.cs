@@ -27,6 +27,19 @@ namespace ImageGallery.Client
         public void ConfigureServices(IServiceCollection services)
         {
            
+            services.AddAuthorization(authOptions =>
+            {
+                authOptions.AddPolicy("canOrderFrame",
+                    policyBuilder =>
+                    {
+                        policyBuilder.RequireAuthenticatedUser();
+                        policyBuilder.RequireClaim("subscriptionlevel", "PayingUser");
+                        policyBuilder.RequireClaim("country", "be");
+                    });
+
+            });
+
+
             // register an IHttpContextAccessor so we can access the current
             // HttpContext in services by injecting it
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -56,6 +69,8 @@ namespace ImageGallery.Client
                 //options.Scope.Add("profile"); // these two scopes are requested in default.
                 options.Scope.Add("address");
                 options.Scope.Add("ImageGallaryroles");
+                options.Scope.Add("country");
+                options.Scope.Add("subscriptionlevel");
                 options.Scope.Add("imagegalleryapi");
                 options.SaveTokens = true; // Allows the middleweat to save the tokens recieved from the identity provider.
                 options.ClientSecret = "secret";
@@ -67,6 +82,8 @@ namespace ImageGallery.Client
                 options.ClaimActions.DeleteClaim("sud");
                 // options.ClaimActions.DeleteClaim("address");
                 options.ClaimActions.MapUniqueJsonKey("role", "role");
+                options.ClaimActions.MapUniqueJsonKey("country", "country");
+                options.ClaimActions.MapUniqueJsonKey("subscriptionlevel", "subscriptionlevel");
 
                 // Contains validation parameters n how a token should be validated, it also allows us to specify name clame types and role claim types.
                 options.TokenValidationParameters = new TokenValidationParameters
@@ -81,6 +98,9 @@ namespace ImageGallery.Client
             });
             // Add framework services.
             services.AddMvc();
+
+
+
 
 
 

@@ -22,7 +22,6 @@ namespace Lewis.IDP
                     Username = "frank",
                     Password = "password",
 
-
                     // Represent info about the user. They are related to scopes.
                     Claims = new List<Claim>
                     {
@@ -30,7 +29,8 @@ namespace Lewis.IDP
                         new Claim("family_name", "Guy"),
                         new Claim("address", "Main road 1"),
                         new Claim("role", "FreeUser"),
-
+                        new Claim("subscriptionlevel", "FreeUser"),
+                        new Claim("country", "be")
                     }
 
                 },
@@ -49,7 +49,9 @@ namespace Lewis.IDP
                         new Claim("given_name", "Claire"),
                         new Claim("family_name", "Guy"),
                         new Claim("address", "big road 2"),
-                        new Claim("role", "PayingUser")
+                        new Claim("role", "PayingUser"),
+                        new Claim("subscriptionlevel", "PayingUser"),
+                        new Claim("country", "be")
 
 
                     }
@@ -70,8 +72,11 @@ namespace Lewis.IDP
                 // In the client object/database about the user.
                 new IdentityResources.Profile(),
                 new IdentityResources.Address(),
-                // Scope name Roles, display name - Your rols, List of claims that must be returned when an application asks for this role scope.
+                // Scope name Roles, display name - Your rolse, List of claims that must be returned when an application asks for this role scope.
                 new IdentityResource( "ImageGallaryroles", "Your role(s)", new List<string>() { "role" }),
+                new IdentityResource( "country", "The country that you live", new List<string>(){ "country"}),
+                new IdentityResource( "subscriptionlevel", "Your subscription level", new List<string>(){ "subscriptionlevel"}),
+
 
             };
 
@@ -121,7 +126,9 @@ namespace Lewis.IDP
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.Address,
                         "ImageGallaryroles",
-                        "imagegalleryapi"
+                        "imagegalleryapi",
+                        "country",
+                        "subscriptionlevel"
                     },
                     // Secret used to validate the client.
                     ClientSecrets =
