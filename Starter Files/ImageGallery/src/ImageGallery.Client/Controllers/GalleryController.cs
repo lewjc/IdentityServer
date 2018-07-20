@@ -44,7 +44,12 @@ namespace ImageGallery.Client.Controllers
                     JsonConvert.DeserializeObject<IList<Image>>(imagesAsString).ToList());
 
                 return View(galleryIndexViewModel);
-            }          
+            } 
+            else if (response.StatusCode == System.Net.HttpStatusCode.Forbidden || response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+
+                return RedirectToAction("AccessDenied", "Authorization");
+            }
 
             throw new Exception($"A problem happened while calling the API: {response.ReasonPhrase}");
         }
@@ -126,7 +131,7 @@ namespace ImageGallery.Client.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles ="PayingUser")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddImage(AddImageViewModel addImageViewModel)
         {   
@@ -195,6 +200,7 @@ namespace ImageGallery.Client.Controllers
             
         }
 
+        [Authorize(Roles = "PayingUser")]
         public async Task<IActionResult> OrderFrame()
         {
             // Gets the meta data document from the idp endpoint

@@ -18,7 +18,7 @@ namespace Lewis.IDP
                 new TestUser
                 {
                     // Info about the user, Sub must always be unique to the user.
-                    SubjectId = "ABCDE-12345",
+                    SubjectId = "d860efca-22d9-47fd-8249-791ba61b07c7",
                     Username = "frank",
                     Password = "password",
 
@@ -28,7 +28,8 @@ namespace Lewis.IDP
                     {
                         new Claim("given_name", "Frank"),
                         new Claim("family_name", "Guy"),
-                        new Claim("address", "Main road 1")
+                        new Claim("address", "Main road 1"),
+                        new Claim("role", "FreeUser"),
 
                     }
 
@@ -39,15 +40,16 @@ namespace Lewis.IDP
                     // Info about the user, Sub must always be unique to the user.
                     SubjectId = "ABCDE-54321",
                     Username = "Claire",
-                    Password = "Password",
+                    Password = "password",
 
 
                     // Represent info about the user.
                     Claims = new List<Claim>
                     {
-                        new Claim("given_name", "Frank"),
+                        new Claim("given_name", "Claire"),
                         new Claim("family_name", "Guy"),
-                        new Claim("address", "big road 2")
+                        new Claim("address", "big road 2"),
+                        new Claim("role", "PayingUser")
 
 
                     }
@@ -68,9 +70,23 @@ namespace Lewis.IDP
                 // In the client object/database about the user.
                 new IdentityResources.Profile(),
                 new IdentityResources.Address(),
+                // Scope name Roles, display name - Your rols, List of claims that must be returned when an application asks for this role scope.
+                new IdentityResource( "ImageGallaryroles", "Your role(s)", new List<string>() { "role" }),
 
             };
 
+
+        }
+
+        public static IEnumerable<ApiResource> GetApiResources()
+        {
+            return new List<ApiResource>
+            {
+                // here we are providing which claim types have to be returned when requesting the image gallery api scope.
+                // This means the roles will be in the access token that we send to the api, and can verify.
+                new ApiResource("imagegalleryapi", "Image Gallery API", new List<string>() {"role"})
+
+            };
 
         }
 
@@ -104,6 +120,8 @@ namespace Lewis.IDP
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.Address,
+                        "ImageGallaryroles",
+                        "imagegalleryapi"
                     },
                     // Secret used to validate the client.
                     ClientSecrets =

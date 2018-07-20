@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 
 namespace ImageGallery.Client
@@ -40,7 +41,9 @@ namespace ImageGallery.Client
             {
                 options.DefaultScheme = "Cookies";
                 options.DefaultChallengeScheme = "oidc";
-            }).AddCookie("Cookies")
+            }).AddCookie("Cookies", options =>
+                options.AccessDeniedPath = "/Authorization/AccessDenied" // Setting the view to display if the user experiences an access denied response, as they do not have permissions to view something.
+            )
             .AddOpenIdConnect("oidc", options =>        // Here we are defining support options for the open id connect authentication workflow.
             {
                 // This handler creating the auth requests, token and other request and handle identiy token validation.
@@ -52,6 +55,8 @@ namespace ImageGallery.Client
                 //options.Scope.Add("openid");
                 //options.Scope.Add("profile"); // these two scopes are requested in default.
                 options.Scope.Add("address");
+                options.Scope.Add("ImageGallaryroles");
+                options.Scope.Add("imagegalleryapi");
                 options.SaveTokens = true; // Allows the middleweat to save the tokens recieved from the identity provider.
                 options.ClientSecret = "secret";
                 options.GetClaimsFromUserInfoEndpoint = true;
@@ -61,6 +66,17 @@ namespace ImageGallery.Client
                 // Delete claim adds a filter for the specified claim which means It CANNOT be passed from the web token.
                 options.ClaimActions.DeleteClaim("sud");
                 // options.ClaimActions.DeleteClaim("address");
+                options.ClaimActions.MapUniqueJsonKey("role", "role");
+
+                // Contains validation parameters n how a token should be validated, it also allows us to specify name clame types and role claim types.
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    NameClaimType = IdentityModel.JwtClaimTypes.GivenName,
+                    // This is what we mapped the role claim being passed through from the user, so we now say that whenever checking the role of the current logged in user,
+                    // use the claim "role" that was sent in the JWT ats
+                    RoleClaimType = IdentityModel.JwtClaimTypes.Role
+
+                };
 
             });
             // Add framework services.

@@ -15,6 +15,35 @@
           "lib/netstandard2.0/IdentityModel.dll": {}
         }
       },
+      "IdentityModel.AspNetCore.OAuth2Introspection/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "3.6.0",
+          "Microsoft.AspNetCore.Authentication": "2.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Caching.Memory": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.AspNetCore.OAuth2Introspection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.AspNetCore.OAuth2Introspection.dll": {}
+        }
+      },
+      "IdentityServer4.AccessTokenValidation/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel.AspNetCore.OAuth2Introspection": "3.3.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "2.0.0",
+          "Microsoft.AspNetCore.Authorization": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityServer4.AccessTokenValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityServer4.AccessTokenValidation.dll": {}
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -4978,6 +5007,36 @@
         "lib/netstandard2.0/IdentityModel.dll",
         "lib/netstandard2.0/IdentityModel.pdb",
         "lib/netstandard2.0/IdentityModel.xml"
+      ]
+    },
+    "IdentityModel.AspNetCore.OAuth2Introspection/3.3.0": {
+      "sha512": "WQzG293uJ0ble6fVenVH/A4FM84vKXvq5MXG3nIv8TG+kkWKU75+z3d2sqFuWWB4ku3GB6AASjkw4xD4b0xYsw==",
+      "type": "package",
+      "path": "identitymodel.aspnetcore.oauth2introspection/3.3.0",
+      "files": [
+        "identitymodel.aspnetcore.oauth2introspection.3.3.0.nupkg.sha512",
+        "identitymodel.aspnetcore.oauth2introspection.nuspec",
+        "lib/net461/IdentityModel.AspNetCore.OAuth2Introspection.dll",
+        "lib/net461/IdentityModel.AspNetCore.OAuth2Introspection.pdb",
+        "lib/net461/IdentityModel.AspNetCore.OAuth2Introspection.xml",
+        "lib/netstandard2.0/IdentityModel.AspNetCore.OAuth2Introspection.dll",
+        "lib/netstandard2.0/IdentityModel.AspNetCore.OAuth2Introspection.pdb",
+        "lib/netstandard2.0/IdentityModel.AspNetCore.OAuth2Introspection.xml"
+      ]
+    },
+    "IdentityServer4.AccessTokenValidation/2.6.0": {
+      "sha512": "cEY99gicdjVFOH1hJtiJr/2AcaymlwNNqR/a30P+0agPKZ/EebHxVAEqySvQddWDL6sl2Tc1dUQsK8yqP2lj5Q==",
+      "type": "package",
+      "path": "identityserver4.accesstokenvalidation/2.6.0",
+      "files": [
+        "identityserver4.accesstokenvalidation.2.6.0.nupkg.sha512",
+        "identityserver4.accesstokenvalidation.nuspec",
+        "lib/net461/IdentityServer4.AccessTokenValidation.dll",
+        "lib/net461/IdentityServer4.AccessTokenValidation.pdb",
+        "lib/net461/IdentityServer4.AccessTokenValidation.xml",
+        "lib/netstandard2.0/IdentityServer4.AccessTokenValidation.dll",
+        "lib/netstandard2.0/IdentityServer4.AccessTokenValidation.pdb",
+        "lib/netstandard2.0/IdentityServer4.AccessTokenValidation.xml"
       ]
     },
     "Libuv/1.10.0": {
@@ -12904,6 +12963,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "IdentityModel >= 3.8.0",
+      "IdentityServer4.AccessTokenValidation >= 2.6.0",
       "ImageGallery.Model >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.6",
       "Microsoft.NETCore.App >= 2.0.0",
@@ -12958,6 +13018,10 @@
           "IdentityModel": {
             "target": "Package",
             "version": "[3.8.0, )"
+          },
+          "IdentityServer4.AccessTokenValidation": {
+            "target": "Package",
+            "version": "[2.6.0, )"
           },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
