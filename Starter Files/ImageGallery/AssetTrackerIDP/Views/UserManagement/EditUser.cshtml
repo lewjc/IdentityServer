@@ -1,0 +1,109 @@
+﻿@model AssetTrackerIDP.ViewModels.EditUserViewModel
+@using AssetTrackerIDP.User.Data.Enums.Roles;
+
+
+<form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post" enctype="multipart/form-data">
+
+    <div class="container">
+        <div class="col-sm-5">
+            <div class="row text-center">
+                <img class="img-thumbnail center-block" style="height:250px; width:250px; object-fit:cover ; margin-top:30px;" src="@Url.Action("GetProfilePictureAsync", "UserManagement", new { id = @Model.Id })" />
+                <h2 class="text-capitalize">@Model.Username</h2> 
+            </div>
+            <hr/>
+            <div class="col-sm-12">
+                <div class="col-sm-6 col-sm-offset-3" >
+                    <div class="row">
+                        <label asp-for="UserImage">Change Image</label>
+                        <input asp-for="UserImage" type="file" id="fileUpload" accept=".png,.jpg,.jpeg,.gif" />
+                    </div>
+                    <br />
+                    <div class="row">
+                        <label style="margin-top:10px;" asp-for="Username"></label>
+                        <input disabled asp-for="Username" class="form-control" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="row form-group">
+                        <label asp-for="IsLocked">Lock Account &nbsp</label>
+                        <input asp-for="@Model.IsLocked" type="checkbox" />
+                    </div>
+                    <div class="row form-group">
+                        <label asp-for="UserRole">User Role &nbsp</label>
+                        <select asp-for="UserRole" asp-items="Html.GetEnumSelectList<Permission>()" title="Permissions">
+                            <option value="RoleUndefined">Please Select</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button type="submit" class="btn btn-block" asp-action="ChangePassword" asp-controller="UserManagement" asp-route-id="@Model.Id">Change Password</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-7">
+            <h1 class="text-info text-center">Edit User</h1>
+            <hr />
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label asp-for="FirstName"></label>
+                    <input placeholder="Please enter first name.." asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="col-sm-6">
+                    <label asp-for="LastName"></label>
+                    <input placeholder="Please enter last name" asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <h4>User Groups: </h4>
+                    @foreach (var group in Model.AvailableGroups)
+                    {
+                        // Adding the group to the previous groups.. Allows for an easier check when we deal with the post in the
+                        // controller.
+                        Model.PreviousGroups.Add(group.Value);
+
+                        if (Model.SelectedGroups.Contains(group.Value))
+                        {
+
+                        <label>
+                            <input checked type="checkbox"
+                                   name="SelectedGroups"
+                                   value="@group.Value" /> @group.Text &nbsp
+                                <input name="PreviousGroups" type="checkbox" hidden="hidden" value="@group.Value" checked />
+                        </label>
+                                continue;
+                        }
+                        <label>
+                            <input type="checkbox"
+                                    name="SelectedGroups"
+                                    value="@group.Value" /> @group.Text &nbsp
+
+                       </label>
+                    }
+                    <hr />
+                </div>
+            </div>
+            <div class="col-sm-6 form-group">
+                <button type="submit" name="buttonSubmit" value="Submit" class="btn btn-block">Update User</button>
+            </div>
+            <div class="col-sm-6">
+                <button type="submit" name="buttonSubmit" value="Cancel" class="btn btn-block">Cancel</button>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

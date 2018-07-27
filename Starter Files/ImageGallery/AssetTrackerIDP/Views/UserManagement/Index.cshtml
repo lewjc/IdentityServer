@@ -1,0 +1,43 @@
+﻿@model AssetTrackerIDP.ViewModels.UserIndexViewModel
+
+@if (Model.Errors.Count > 0)
+{
+<div class="container">
+    <h3 class="text-danger">Error</h3>
+    <div class="col-sm-">
+        <ul>
+            @foreach (string error in Model.Errors)
+            {
+
+                <li class="text-danger">@error</li>
+            }
+        </ul>
+    </div>
+    <hr />
+</div>
+}
+<div class="container">
+    @foreach (var user in Model.Users)
+    {
+
+        <div class="pull-left col-sm-3">
+            <div>
+                <img style="width:200px; height:200px; margin-top:30px; object-fit:cover " class="img-thumbnail center-block" src="@Url.Action("GetProfilePictureAsync", "UserManagement", new { id = user.Id })" />
+            </div>
+            <div>
+                <div class="h3 text-center text-capitalize" >@user.UserName</div>
+                <div class="bottomMarginDefault">
+                    <div>
+                        <form method="get">
+                            <div role="group">
+                                <button type="submit" class="btn btn-block btn-style" asp-action="EditUser" asp-controller="UserManagement" asp-route-id="@user.Id">Edit User</button>
+                                <button type="submit" class="btn btn-block" asp-action="DeleteUser" asp-controller="UserManagement" asp-route-id="@user.Id">Delete User</button>
+                                <button type="submit" class="btn btn-block" asp-action="ViewUser" asp-controller="UserManagement" asp-route-id="@user.Id">View User</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

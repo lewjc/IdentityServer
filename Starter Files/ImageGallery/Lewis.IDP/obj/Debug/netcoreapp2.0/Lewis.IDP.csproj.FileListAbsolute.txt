@@ -9,3 +9,14 @@ C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\Im
 C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\Lewis.IDP\bin\Debug\netcoreapp2.0\Lewis.IDP.pdb
 C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\Lewis.IDP\obj\Debug\netcoreapp2.0\Lewis.IDP.dll
 C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\Lewis.IDP\obj\Debug\netcoreapp2.0\Lewis.IDP.pdb
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Lewis.IDP\bin\Debug\netcoreapp2.0\Lewis.IDP.deps.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Lewis.IDP\bin\Debug\netcoreapp2.0\Lewis.IDP.runtimeconfig.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Lewis.IDP\bin\Debug\netcoreapp2.0\Lewis.IDP.runtimeconfig.dev.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Lewis.IDP\bin\Debug\netcoreapp2.0\Lewis.IDP.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Lewis.IDP\bin\Debug\netcoreapp2.0\Lewis.IDP.pdb
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Lewis.IDP\obj\Debug\netcoreapp2.0\Lewis.IDP.csprojAssemblyReference.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Lewis.IDP\obj\Debug\netcoreapp2.0\Lewis.IDP.csproj.CoreCompileInputs.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Lewis.IDP\obj\Debug\netcoreapp2.0\Lewis.IDP.AssemblyInfoInputs.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Lewis.IDP\obj\Debug\netcoreapp2.0\Lewis.IDP.AssemblyInfo.cs
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Lewis.IDP\obj\Debug\netcoreapp2.0\Lewis.IDP.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Lewis.IDP\obj\Debug\netcoreapp2.0\Lewis.IDP.pdb

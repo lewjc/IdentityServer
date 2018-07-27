@@ -126,6 +126,9 @@ namespace IdentityServer4.Quickstart.UI
                         };
                     };
 
+                    props.Items.Add("LoginProvider", AccountOptions.WindowsAuthenticationSchemeName);
+
+
                     // issue authentication cookie with subject ID and username
                     await HttpContext.SignInAsync(user.SubjectId, user.Username, props);
 

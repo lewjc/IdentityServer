@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
@@ -29,6 +30,9 @@ namespace ImageGallery.API.Controllers
         [HttpGet()]
         public IActionResult GetImages()
         {
+
+            Debug.WriteLine(User.Claims.ToString());
+
             // Get the sub claim to identify the current user.
             var ownerId = User.Claims.FirstOrDefault(c => c.Type == "sub").Value;
 

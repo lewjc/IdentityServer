@@ -12565,11 +12565,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lewis\\Desktop\\git\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\Lewis.IDP\\Lewis.IDP.csproj",
+      "projectUniqueName": "C:\\Users\\lewis\\Desktop\\git\\SecuringAspNetCore2WithOAuth2AndOIDC\\IdentityServer\\Starter Files\\ImageGallery\\Lewis.IDP\\Lewis.IDP.csproj",
       "projectName": "Lewis.IDP",
-      "projectPath": "C:\\Users\\lewis\\Desktop\\git\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\Lewis.IDP\\Lewis.IDP.csproj",
+      "projectPath": "C:\\Users\\lewis\\Desktop\\git\\SecuringAspNetCore2WithOAuth2AndOIDC\\IdentityServer\\Starter Files\\ImageGallery\\Lewis.IDP\\Lewis.IDP.csproj",
       "packagesPath": "C:\\Users\\lewis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lewis\\Desktop\\git\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\Lewis.IDP\\obj\\",
+      "outputPath": "C:\\Users\\lewis\\Desktop\\git\\SecuringAspNetCore2WithOAuth2AndOIDC\\IdentityServer\\Starter Files\\ImageGallery\\Lewis.IDP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

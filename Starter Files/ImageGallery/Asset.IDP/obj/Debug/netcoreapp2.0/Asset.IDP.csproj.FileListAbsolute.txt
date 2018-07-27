@@ -1,0 +1,12 @@
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Asset.IDP\bin\Debug\netcoreapp2.0\Asset.IDP.deps.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Asset.IDP\bin\Debug\netcoreapp2.0\Asset.IDP.runtimeconfig.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Asset.IDP\bin\Debug\netcoreapp2.0\Asset.IDP.runtimeconfig.dev.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Asset.IDP\bin\Debug\netcoreapp2.0\Asset.IDP.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Asset.IDP\obj\Debug\netcoreapp2.0\Asset.IDP.csprojAssemblyReference.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Asset.IDP\obj\Debug\netcoreapp2.0\Asset.IDP.csproj.CoreCompileInputs.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Asset.IDP\obj\Debug\netcoreapp2.0\Asset.IDP.AssemblyInfoInputs.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Asset.IDP\obj\Debug\netcoreapp2.0\Asset.IDP.AssemblyInfo.cs
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Asset.IDP\bin\Debug\netcoreapp2.0\Asset.IDP.pdb
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Asset.IDP\obj\Debug\netcoreapp2.0\Asset.IDP.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\Asset.IDP\obj\Debug\netcoreapp2.0\Asset.IDP.pdb
+C:\Users\lewis\desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\asset.idp\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

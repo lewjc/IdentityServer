@@ -1,0 +1,11 @@
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\AssetTrackerIDP\bin\Debug\netcoreapp2.0\AssetTrackerIDP.deps.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\AssetTrackerIDP\bin\Debug\netcoreapp2.0\AssetTrackerIDP.runtimeconfig.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\AssetTrackerIDP\bin\Debug\netcoreapp2.0\AssetTrackerIDP.runtimeconfig.dev.json
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\AssetTrackerIDP\bin\Debug\netcoreapp2.0\AssetTrackerIDP.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\AssetTrackerIDP\obj\Debug\netcoreapp2.0\AssetTrackerIDP.csprojAssemblyReference.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\AssetTrackerIDP\obj\Debug\netcoreapp2.0\AssetTrackerIDP.csproj.CoreCompileInputs.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\AssetTrackerIDP\obj\Debug\netcoreapp2.0\AssetTrackerIDP.AssemblyInfoInputs.cache
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\AssetTrackerIDP\obj\Debug\netcoreapp2.0\AssetTrackerIDP.AssemblyInfo.cs
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\AssetTrackerIDP\bin\Debug\netcoreapp2.0\AssetTrackerIDP.pdb
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\AssetTrackerIDP\obj\Debug\netcoreapp2.0\AssetTrackerIDP.dll
+C:\Users\lewis\Desktop\git\SecuringAspNetCore2WithOAuth2AndOIDC\IdentityServer\Starter Files\ImageGallery\AssetTrackerIDP\obj\Debug\netcoreapp2.0\AssetTrackerIDP.pdb

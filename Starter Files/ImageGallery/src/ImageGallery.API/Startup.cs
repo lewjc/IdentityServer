@@ -27,20 +27,20 @@ namespace ImageGallery.API
              services.AddMvc();
 
 
-            services.AddAuthorization(authOptions =>
-            {
-                authOptions.AddPolicy("UserOwnsImage", policyBuilder =>
-                {
-                    // TODO
-                });
-            });
+            //services.AddAuthorization(authOptions =>
+            //{
+            //    authOptions.AddPolicy("UserOwnsImage", policyBuilder =>
+            //    {
+            //        // TODO
+            //    });
+            //});
 
             // Use the default authorisation scheme of bearer, this means that any request to this api must include a bearer token.
             // This authority is the IDP that produces the bearer/access token so that it can be verified.
             services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
                 .AddIdentityServerAuthentication(options =>
                 {
-                    options.Authority = "https://localhost:44356";
+                    options.Authority = "https://localhost:44319/";
                     options.ApiName = "imagegalleryapi";
                 });
 

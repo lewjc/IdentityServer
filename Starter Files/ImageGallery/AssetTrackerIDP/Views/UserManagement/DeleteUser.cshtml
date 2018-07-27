@@ -1,0 +1,21 @@
+﻿@model AssetTrackerIDP.ViewModels.DeleteUserViewModel
+
+<div class="logout-page">
+    <div class="page-header">
+        <h1>Remove User</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <p>Are you sure you want to delete @Model.UserToDelete.UserName?</p>
+            <form asp-action="DeleteUser" asp-controller="UserManagement" asp-route-id="@Model.UserToDelete.Id" method="post">
+                <input type="hidden" name="DeleteUser" value="@Model.UserToDelete.Id"/>
+                <fieldset>
+                    <div class="form-group">
+                        <button name="buttonDelete" value="Yes" class="btn btn-primary">Yes</button>
+                        <button name="buttonDelete" value="No" class="btn btn-danger">No</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

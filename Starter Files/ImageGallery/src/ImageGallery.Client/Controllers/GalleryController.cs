@@ -30,12 +30,13 @@ namespace ImageGallery.Client.Controllers
         public async Task<IActionResult> Index()
         {
 
-            WriteOutIdentityInformation();
+
+            await WriteOutIdentityInformation();
             // call the API
             var httpClient = await _imageGalleryHttpClient.GetClient(); 
 
             var response = await httpClient.GetAsync("api/images").ConfigureAwait(false);
-
+       
             if (response.IsSuccessStatusCode)
             {
                 var imagesAsString = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
@@ -194,8 +195,8 @@ namespace ImageGallery.Client.Controllers
         public async Task Logout()
         {
             // Signs us out from the site and the identity server.
-            await HttpContext.SignOutAsync("Cookies");
             await HttpContext.SignOutAsync("oidc");
+            await HttpContext.SignOutAsync("Cookies");
 
             
         }

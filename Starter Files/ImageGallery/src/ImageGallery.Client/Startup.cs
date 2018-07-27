@@ -61,7 +61,7 @@ namespace ImageGallery.Client
             {
                 // This handler creating the auth requests, token and other request and handle identiy token validation.
                 options.SignInScheme = "Cookies";
-                options.Authority = "https://localhost:44356"; // IDP
+                options.Authority = "https://localhost:44319/"; // IDP
                 options.ClientId = "imagegalleryclient";
                 options.ResponseType = "code id_token"; // This is where we define our flow. The response type the server will send.  this is a hybrid method, where the identity token and authorisation code is returned from auth endpoint.
                 // options.CallbackPath = new PathString("..."); the redirect path on the client that the tokens are sent to.
@@ -72,6 +72,7 @@ namespace ImageGallery.Client
                 options.Scope.Add("country");
                 options.Scope.Add("subscriptionlevel");
                 options.Scope.Add("imagegalleryapi");
+                options.Scope.Add("Group");
                 options.SaveTokens = true; // Allows the middleweat to save the tokens recieved from the identity provider.
                 options.ClientSecret = "secret";
                 options.GetClaimsFromUserInfoEndpoint = true;
@@ -81,17 +82,18 @@ namespace ImageGallery.Client
                 // Delete claim adds a filter for the specified claim which means It CANNOT be passed from the web token.
                 options.ClaimActions.DeleteClaim("sud");
                 // options.ClaimActions.DeleteClaim("address");
-                options.ClaimActions.MapUniqueJsonKey("role", "role");
+                //options.ClaimActions.MapUniqueJsonKey("role", "role");
                 options.ClaimActions.MapUniqueJsonKey("country", "country");
                 options.ClaimActions.MapUniqueJsonKey("subscriptionlevel", "subscriptionlevel");
-
+          
                 // Contains validation parameters n how a token should be validated, it also allows us to specify name clame types and role claim types.
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    NameClaimType = IdentityModel.JwtClaimTypes.GivenName,
+                
+                    //NameClaimType = IdentityModel.JwtClaimTypes.GivenName,
                     // This is what we mapped the role claim being passed through from the user, so we now say that whenever checking the role of the current logged in user,
                     // use the claim "role" that was sent in the JWT ats
-                    RoleClaimType = IdentityModel.JwtClaimTypes.Role
+                    //RoleClaimType = IdentityModel.JwtClaimTypes.Role
 
                 };
 
